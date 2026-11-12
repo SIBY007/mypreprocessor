@@ -65,19 +65,7 @@ input.c ──► remove_comments ──► line loop ──┬─ #include → 
                                                               input.i
 ```
 
-**Macro expansion** scans each line token by token. String/char literals and
-numbers are skipped, so `"PI"` and `0x1F` are never touched and `PIE` is not
-confused with `PI`. For a function-like macro the argument list is read with
-balanced parentheses (so `F((1,2), 3)` has two arguments), arguments are
-expanded, substituted into the body, and the result is rescanned. A macro that
-is currently being expanded is not expanded again, so `#define A B` /
-`#define B A` terminates instead of looping forever.
 
-**Include search order:** for `"file"` – the including file's directory, the
-current directory, then `-I` directories; for `<file>` – `-I` directories, then
-the same local places. If a `<system>` header is not found (e.g. `<stdio.h>`) the
-line is left in the output with a warning; a missing `"file"` is an error.
-Include depth is limited to 32.
 
 ## Example
 
