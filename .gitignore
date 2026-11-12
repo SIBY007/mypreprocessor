@@ -1,0 +1,19 @@
+# Object files and dependency files
+build/
+*.o
+*.d
+
+# Executable targets
+mypreprocessor
+mypreprocessor.exe
+
+# Output preprocessed files
+*.i
+tests/*.i
+
+# Operating system / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
