@@ -34,6 +34,10 @@ make clean
 ./mypreprocessor tests/sample.c && cat tests/sample.i
 ```
 
+## Terminal Output & Demo
+
+![Terminal Output on Ubuntu Environment](docs/terminal_output.png)
+
 Requires `gcc` and `make` (Linux / macOS / WSL).
 
 ## Project layout (modular)
